@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* ===== Top Header ===== */
+.top_header {
+    background-color: #e8dcdc;
+    padding: 10px 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    font-size: 18px;
+    color: #333;
+}
+
+.info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ===== Mid Header ===== */
+.mid_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin-left: 0;
+}
+
+/* Wraps search + login on right side */
+.mid_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search_box {
+    display: flex;
+    align-items: center;
+}
+
+.search_box input {
+    height: 38px;
+    width: 250px;
+    padding: 0 12px;
+    border: 1px solid #8a8a8a;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    background: #f6f7f8;
+}
+
+.search_box button {
+    height: 38px;
+    width: 45px;
+    background-color: #cd1e76;
+    color: white;
+    /* border: 1px solid #cd1e76; */
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 0;
+    border-bottom-left-radius: 1px;
+    border-top-left-radius: 1px;
+}
+
+
+.search_box button:hover {
+    background-color: yellow;
+    /* border: 1px solid #a61b1b; */
+    color: #cd1e76;
+}
+
+
+.header .mid_right .user {
+    display: flex;
+    margin-right: 30px;
+}
+
+.header .mid_right .user icon {
+    margin-right: 10px;
+}
+
+/* .header .mid_right .user .icon .btn button {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: none;
+    cursor: pointer;
+} */
+
+/* Replace .user styles with this new login_btn setup */
+.login_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f6f7f8;
+    color: black;
+    border: none;
+    padding: 0 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 38px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login_btn:hover {
+    background-color: #ddd;
+}
+
+.logout_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f6f7f8;
+    color: black;
+    border: none;
+    padding: 0 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 38px;
+    font-size: 16px;
+    transition: 0.3s;
+
+}
+
+.logout_btn:hover {
+    background-color: #ddd;
+}
+
+.login_icon {
+    font-size: 18px;
+}
+
+/* Optional: update mid_right if needed */
+.mid_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .last_header {
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    background: #232323;
+    justify-content: space-between;
+}
+
+.header .last_header .user_profile
+{
+    display: flex;
+    margin-top: 10px;
+}
+
+.header .last_header .user_profile .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
