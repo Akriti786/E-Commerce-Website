@@ -9,6 +9,22 @@ const Home = () => {
 
   const [trendingProduct, setTrendingProduct] = useState(HomeProducts);
 
+  //FILTER FOR TRENDING PRODUCTS
+  const filtercate = (x) =>
+  {
+    const filterproduct = HomeProducts.filter((curElm) =>
+    {
+      return curElm.type === x
+    })
+    setTrendingProduct(filterproduct)
+  }
+
+//ALL TRENDING PRODUCTS
+const allTrendingProduct = () =>
+{
+  setTrendingProduct(HomeProducts)
+}
+
   return (
     <>
       <div className='home'>
@@ -25,12 +41,12 @@ const Home = () => {
             <div className='left_box'>
               <div className='headers'>
                 <div className='heading'>
-                  <h2>trending product</h2>
+                  <h2 onClick={()=> allTrendingProduct ()}>trending product</h2>
                 </div>
                 <div className='cate'>
-                  <h3>New</h3>
-                  <h3>Featured</h3>
-                  <h3>Top Selling</h3>
+                  <h3 onClick={() => filtercate ('new')} >New</h3>
+                  <h3 onClick={() => filtercate ('featured')}>Featured</h3>
+                  <h3 onClick={() => filtercate ('top')}>Top Selling</h3>
                 </div>
               </div>
               <div className='products'>
@@ -53,7 +69,7 @@ const Home = () => {
                             </div>
                             <div className='info'>
                               <h3>{curElm.Name}</h3>
-                              <p>${curElm.price}</p>
+                              <p>INR.{curElm.price}</p>
                               <button className='btn'>Add to cart</button>
                             </div>
                           </div>
