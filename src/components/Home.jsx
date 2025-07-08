@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import HomeProducts from './HomeProducts';
-import { AiFillEye } from 'react-icons/ai';
-import { AiFillHeart } from 'react-icons/ai';
+import { AiFillEye , AiFillHeart  } from 'react-icons/ai';
 
 const Home = () => {
 
@@ -80,7 +79,20 @@ const allTrendingProduct = () =>
                 </div>
               </div>
             </div>
-            <div className='right_box'></div>
+            <div className='right_box'>
+              <div className='container'>
+                <div className='testimonial'>
+                  <div className='head'>
+                    <h3>Our Testmonial</h3>
+                  </div>
+                  <div className='detail'>
+                    <div className='img_box'>
+                      <img src="/image/T1.png" alt="Testimonial-Image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
