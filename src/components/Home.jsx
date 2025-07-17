@@ -2,27 +2,25 @@ import React, { useState } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import HomeProducts from './HomeProducts';
-import { AiFillEye , AiFillHeart  } from 'react-icons/ai';
+import { AiFillEye, AiFillHeart } from 'react-icons/ai';
+import { BiLogoFacebook, BiLogoInstagram, BiLogoYoutube, BiLogoTwitter } from 'react-icons/bi';
 
 const Home = () => {
 
   const [trendingProduct, setTrendingProduct] = useState(HomeProducts);
 
   //FILTER FOR TRENDING PRODUCTS
-  const filtercate = (x) =>
-  {
-    const filterproduct = HomeProducts.filter((curElm) =>
-    {
+  const filtercate = (x) => {
+    const filterproduct = HomeProducts.filter((curElm) => {
       return curElm.type === x
     })
     setTrendingProduct(filterproduct)
   }
 
-//ALL TRENDING PRODUCTS
-const allTrendingProduct = () =>
-{
-  setTrendingProduct(HomeProducts)
-}
+  //ALL TRENDING PRODUCTS
+  const allTrendingProduct = () => {
+    setTrendingProduct(HomeProducts)
+  }
 
   return (
     <>
@@ -40,19 +38,19 @@ const allTrendingProduct = () =>
             <div className='left_box'>
               <div className='headers'>
                 <div className='heading'>
-                  <h2 onClick={()=> allTrendingProduct ()}>trending product</h2>
+                  <h2 onClick={() => allTrendingProduct()}>Trending Product</h2>
                 </div>
                 <div className='cate'>
-                  <h3 onClick={() => filtercate ('new')} >New</h3>
-                  <h3 onClick={() => filtercate ('featured')}>Featured</h3>
-                  <h3 onClick={() => filtercate ('top')}>Top Selling</h3>
+                  <h3 onClick={() => filtercate('new')} >New</h3>
+                  <h3 onClick={() => filtercate('featured')}>Featured</h3>
+                  <h3 onClick={() => filtercate('top')}>Top Selling</h3>
                 </div>
               </div>
               <div className='products'>
                 <div className='container'>
                   {
                     trendingProduct.map((curElm) => {
-                      return(
+                      return (
                         <>
                           <div className='box'>
                             <div className='img_box'>
@@ -61,7 +59,7 @@ const allTrendingProduct = () =>
                                 <div className='icon_box'>
                                   <AiFillEye />
                                 </div>
-                                  <div className='icon_box'>
+                                <div className='icon_box'>
                                   <AiFillHeart />
                                 </div>
                               </div>
@@ -80,7 +78,7 @@ const allTrendingProduct = () =>
               </div>
             </div>
             <div className='right_box'>
-              <div className='container'>
+              <div className='right_container'>
                 <div className='testimonial'>
                   <div className='head'>
                     <h3>Our Testmonial</h3>
@@ -89,6 +87,27 @@ const allTrendingProduct = () =>
                     <div className='img_box'>
                       <img src="/image/T1.png" alt="Testimonial-Image" />
                     </div>
+                    <div className='info'>
+                      <h3>Pooja Kumari</h3>
+                      <h4>Web Developer</h4>
+                      <p>All the  things goes here only thanks</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='newsletter'>
+                <div className='head'>
+                  <h3>Newsletter</h3>
+                </div>
+                <div className='form'>
+                  <p>Join our mailing list</p>
+                  <input type="email" placeholder='E-mail' autoComplete='off' /><br></br><br></br>
+                  <button>Subscribe</button>
+                  <div className='icon'>
+                    <BiLogoFacebook />
+                    <BiLogoTwitter />
+                    <BiLogoInstagram />
+                    <BiLogoYoutube />
                   </div>
                 </div>
               </div>

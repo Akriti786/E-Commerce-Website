@@ -73,15 +73,27 @@
   width: 100%;
 }
 
-.home .trending .container {
+/* .home .trending .container {
   max-width: 100%;
   display: flex;
-  margin: 10px;
+  padding: 0 10px;
+  gap: 20px;
+  box-sizing: border-box;
+} */
+ .home .trending .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* prevent wrapping to new line */
+  width: 100%;
+  gap: 20px;
+  box-sizing: border-box;
 }
 
+
+
 .home .trending .container .left_box {
-  padding: 10px 20px;
-  width: 77%;
+  padding: 10px;
+  width: 75%;
 }
 
 .home .trending .container .left_box .headers {
@@ -264,30 +276,32 @@
 
 .home .trending .container .right_box
 {
-  padding: 10px 20px;
-  width: 24%;
+  padding: 10px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
 }
 
-.home .trending.container .right_box .container
+.home .trending .container .right_box .right_container
 {
   max-width: 100%;
 }
 
-.home .trending.container .right_box .container .testimonial
+.home .trending .container .right_box .right_container .testimonial
 
 {
   width: 100%;
   border: 4px solid #f6f7f8;
 }
 
-.home .trending.container .right_box .container .testimonial .head 
+.home .trending .container .right_box .right_container .testimonial .head 
 {
   padding: 10px 10px;
   width: 100%;
   background: #f6f7f8;
 }
 
-.home .trending.container .right_box .container .testimonial .head h3 
+.home .trending .container .right_box .right_container .testimonial .head h3 
 {
   text-align: center;
   color: #232323;
@@ -297,3 +311,145 @@
   letter-spacing: 1px;
 }
 
+.home .trending .container .right_box .right_container .testimonial .detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+}
+
+
+.home .trending .container .right_box .right_container .testimonial .img_box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto;
+  display: block;
+}
+
+
+.home .trending .container .right_box .right_container .testimonial .detail {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.home .trending .container .right_box .right_container .testimonial .detail .info
+{
+  margin-top: 10px;
+
+}
+
+
+.home .trending .container .right_box .right_container .testimonial img {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #232323;
+}
+
+
+.home .trending .container .right_box .right_container .testimonial img {
+  text-align: center;
+  font-size: 17px;
+  margin-top: 10px;
+  color: #cd1e76;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.home .trending .container .right_box .right_container .testimonial .detail .info p {
+  text-align: center;
+  font-size: 13px;
+  color: #444;
+  margin-top: 8px;
+}
+
+.home .trending .container .right_box .right_container .testimonial .detail .info h3 ,h4
+{
+    text-align: center;
+    margin: 5px 0;
+}
+
+
+.home .trending .container .right_box .right_container .newsletter {
+  padding: 15px;
+  margin-top: 20px;
+  background: #f6f7f8;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.home .trending .container .right_box .right_container .newsletter .head 
+{
+  margin-top: 10px;
+  width: 100%;
+}
+ 
+.home .trending .container .right_box .right_container .newsletter .head h3 {
+  text-align: center;
+  color: #232323;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+
+.home .trending .container .right_box .right_container .newsletter .form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.home .trending .container .right_box .right_container .newsletter .form p {
+  text-align: center;
+  text-transform: capitalize;
+  color: #8a8a8a;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+.home .trending .container .right_box .right_container .newsletter .form input {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  outline: none;
+  border: 1px solid #8a8a8a;
+  color: #232323;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+
+.home .trending .container .right_box .right_container .newsletter .form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #fed700;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.home .trending .container .right_box .right_container .newsletter .form button:hover {
+  background: #cd1e76;
+  color: #fff;
+}
+
+.home .trending .container .right_box .right_container .newsletter .form .icon {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  font-size: 20px;
+  color: #232323;
+  cursor: pointer;
+}
